@@ -1,15 +1,17 @@
-@import url("https://gitcdn.xyz/repo/octoshrimpy/blokkfont/master/blokkfont.css");
+/* Import font tùy chỉnh BLOKK */
+@import url("https://gitcdn.xyz/repo/octoshrimpy/blokkfont/master/blokkfont.css"); 
 
+/* Cài đặt các class TailwindCSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Đặt nền cho toàn bộ trang */
+/* Đặt màu nền mặc định cho toàn bộ trang */
 html {
   @apply bg-gray-200;
 }
 
-/* Cài đặt font BLOKK */
+/* Sử dụng font BLOKK cho các phần tử có class .font-mock */
 .font-mock {
   font-family: "BLOKK", sans-serif;
 }
