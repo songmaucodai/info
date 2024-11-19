@@ -1,113 +1,15 @@
-/* Reset một số style mặc định */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://gitcdn.xyz/repo/octoshrimpy/blokkfont/master/blokkfont.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Đặt nền cho toàn bộ trang */
+html {
+  @apply bg-gray-200;
 }
 
-/* Cài đặt font chữ cho trang */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Phần ảnh bìa */
-.cover-container {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center; /* Lấy phần giữa ngang của ảnh */
-}
-
-/* Phần thông tin cá nhân */
-.profile {
-  display: flex;
-  justify-content: flex-start; /* Đặt phần tử theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  flex-direction: row; /* Sắp xếp avatar và tên người dùng theo hàng ngang */
-  margin-top: -60px; /* Đẩy phần thông tin lên trên ảnh bìa */
-  text-align: left;
-  position: relative;
-}
-
-.avatar-container {
-  position: relative;
-  top: 40%; /* Đặt avatar sao cho tâm trùng với phần trên của ảnh bìa */
-  left: 10%; /* Đặt avatar cách trái 10% */
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid white; /* Viền trắng bao quanh avatar */
-  transform: translateY(-50%); /* Đảm bảo avatar nằm chính giữa theo chiều dọc */
-}
-
-.avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Căn chỉnh tên người dùng */
-.user-info {
-  margin-left: 20px; /* Khoảng cách giữa avatar và tên */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Căn tên theo chiều dọc */
-  height: 150px; /* Cùng chiều cao với avatar */
-  position: relative;
-  top: 40%; /* Đặt tên người dùng nằm ở phần trên của ảnh bìa */
-  transform: translateY(-50%); /* Căn tên chính giữa theo chiều dọc */
-}
-
-.user-info h1 {
-  font-size: 1.8em;
-  margin-bottom: 10px; /* Khoảng cách giữa tên và mô tả */
-  color: #333;
-}
-
-.user-info p {
-  font-size: 1.2em;
-  color: #333;
-}
-
-/* Phần thông tin liên hệ */
-.contact {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.contact h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-.contact ul {
-  list-style: none;
-}
-
-.contact ul li {
-  margin: 10px 0;
-}
-
-.contact a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
-
-.contact a:hover {
-  color: #f39c12;
+/* Cài đặt font BLOKK */
+.font-mock {
+  font-family: "BLOKK", sans-serif;
 }
