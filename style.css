@@ -1,66 +1,97 @@
-/* Reset một số thuộc tính mặc định của trình duyệt */
+/* Reset một số style mặc định */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Cài đặt font chữ cho trang */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Phần ảnh bìa */
-header {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background-color: #333; /* Màu nền cho phần ảnh bìa */
+.cover-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
 .cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh không bị méo, bao phủ toàn bộ phần ảnh bìa */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
 }
 
 /* Phần thông tin cá nhân */
 .profile {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    margin-top: -100px; /* Đẩy phần profile lên trên để đè lên ảnh bìa */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng cho phần profile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -50px; /* Đẩy phần thông tin lên trên ảnh bìa */
+  text-align: center;
 }
 
 .avatar-container {
-    margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white; /* Border trắng xung quanh avatar */
+  margin-bottom: 20px;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Tạo hình tròn cho avatar */
-    border: 4px solid white; /* Thêm viền trắng quanh avatar */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Tạo bóng cho avatar */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-info h1 {
-    font-size: 2em;
-    color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #fff; /* Màu chữ trắng trên nền tối */
 }
 
 .user-info p {
-    font-size: 1.2em;
-    color: #777;
+  font-size: 1.2em;
+  color: #fff;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+/* Phần thông tin liên hệ */
+.contact {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.contact h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style: none;
+}
+
+.contact ul li {
+  margin: 10px 0;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #f39c12;
 }
