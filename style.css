@@ -41,14 +41,14 @@ body {
 
 .avatar-container {
   position: absolute;
-  top: 50%;  /* Đặt avatar ở giữa ảnh bìa theo chiều dọc */
-  left: 20%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa (20%) */
+  left: 20%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa */
+  bottom: 0;  /* Đặt tâm avatar trùng với mép dưới của ảnh bìa */
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 50%;  /* Hình tròn */
   overflow: hidden;
   border: 5px solid white; /* Viền trắng bao quanh avatar */
-  transform: translateY(-50%); /* Đảm bảo avatar nằm chính giữa theo chiều dọc */
+  transform: translateY(50%); /* Kéo avatar lên một nửa chiều cao của nó */
 }
 
 .avatar {
