@@ -16,32 +16,4 @@ html {
   font-family: "BLOKK", sans-serif;
 }
 
-/* Ko-fi icon */
-.fa-ko-fi::before {
-  content: "\f0f4";
-  display: inline-block;
-  font-size: 1.1em;
-  line-height: 0.45em;
-  margin: -0.45em 0 0 -0.2em;
-  overflow-y: hidden;
-  padding-top: 0.45em;
-}
 
-.fa-ko-fi::after {
-  color: #ff5e5b;
-  content: "\f004"; /* Biểu tượng tim */
-  font-size: 50%;
-  font-weight: 900;
-  margin: 0.5em 0 0 -2em;
-  position: absolute;
-}
-
-/* Đảm bảo tất cả các nút có cùng kích thước */
-a {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
