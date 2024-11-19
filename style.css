@@ -1,0 +1,66 @@
+/* Reset một số thuộc tính mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Phần ảnh bìa */
+header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #333; /* Màu nền cho phần ảnh bìa */
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo, bao phủ toàn bộ phần ảnh bìa */
+}
+
+/* Phần thông tin cá nhân */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: -100px; /* Đẩy phần profile lên trên để đè lên ảnh bìa */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng cho phần profile */
+}
+
+.avatar-container {
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Tạo hình tròn cho avatar */
+    border: 4px solid white; /* Thêm viền trắng quanh avatar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Tạo bóng cho avatar */
+}
+
+.user-info h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.user-info p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
