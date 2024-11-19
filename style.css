@@ -31,18 +31,18 @@ body {
 /* Phần thông tin cá nhân */
 .profile {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: flex-start; /* Đặt phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  flex-direction: row; /* Sắp xếp avatar và tên người dùng theo hàng ngang */
   margin-top: -60px; /* Đẩy phần thông tin lên trên ảnh bìa */
-  text-align: center;
+  text-align: left;
   position: relative;
 }
 
 .avatar-container {
-  position: absolute;
-  top: 30%;  /* Đặt avatar ở giữa ảnh bìa theo chiều dọc */
-  left: 10%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa (20%) */
+  position: relative;
+  top: 40%; /* Đặt avatar sao cho tâm trùng với phần trên của ảnh bìa */
+  left: 10%; /* Đặt avatar cách trái 10% */
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -57,16 +57,27 @@ body {
   object-fit: cover;
 }
 
+/* Căn chỉnh tên người dùng */
+.user-info {
+  margin-left: 20px; /* Khoảng cách giữa avatar và tên */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn tên theo chiều dọc */
+  height: 150px; /* Cùng chiều cao với avatar */
+  position: relative;
+  top: 40%; /* Đặt tên người dùng nằm ở phần trên của ảnh bìa */
+  transform: translateY(-50%); /* Căn tên chính giữa theo chiều dọc */
+}
+
 .user-info h1 {
-  font-size: 2em;
-  margin-top: 100px; /* Đẩy tên xuống phía dưới avatar */
-  margin-bottom: 10px;
-  color: #fff; /* Màu chữ trắng trên nền tối */
+  font-size: 1.8em;
+  margin-bottom: 10px; /* Khoảng cách giữa tên và mô tả */
+  color: #333;
 }
 
 .user-info p {
   font-size: 1.2em;
-  color: #fff;
+  color: #333;
 }
 
 /* Phần thông tin liên hệ */
