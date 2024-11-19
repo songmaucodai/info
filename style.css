@@ -41,8 +41,8 @@ body {
 
 .avatar-container {
   position: absolute;
-  top: 50%;  /* Đặt avatar ở giữa ảnh bìa theo chiều dọc */
-  left: 20%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa (20%) */
+  top: 30%;  /* Đặt avatar ở giữa ảnh bìa theo chiều dọc */
+  left: 10%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa (20%) */
   width: 150px;
   height: 150px;
   border-radius: 50%;
