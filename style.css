@@ -42,7 +42,7 @@ body {
 .avatar-container {
   position: absolute;
   top: 50%;  /* Đặt avatar ở giữa ảnh bìa theo chiều dọc */
-  left: 33%; /* Đặt avatar cách trái 1/3 chiều rộng ảnh bìa */
+  left: 20%; /* Đặt avatar cách trái 1/5 chiều rộng ảnh bìa (20%) */
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -59,7 +59,7 @@ body {
 
 .user-info h1 {
   font-size: 2em;
-  margin-top: 200px; /* Đẩy tên xuống phía dưới avatar */
+  margin-top: 100px; /* Đẩy tên xuống phía dưới avatar */
   margin-bottom: 10px;
   color: #fff; /* Màu chữ trắng trên nền tối */
 }
