@@ -96,8 +96,13 @@
     </div>
     
     <div class="text-center mt-8 text-gray-500 text-sm">
-        &copy; 2025 Songmaucodai.Online
-    </div>
+    &copy; <span id="year"></span> songmaucodai
+</div>
+
+<script>
+    // Script lấy năm hiện tại
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   </main>
 </body>
