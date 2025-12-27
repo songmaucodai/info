@@ -3,94 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Cá Nhân</title>
-  <!-- Liên kết với TailwindCSS -->
+  <title>Thông tin cá nhân | Sống Màu Cỏ Dại</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<!-- Thêm favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-<!-- Thêm vào trong <head> của trang HTML để sử dụng Font Awesome mới -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" id="font-awesome-5">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  
+  <style>
+      /* Hiệu ứng hover nhẹ cho toàn trang */
+      body {
+          font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+  </style>
 </head>
 <body class="bg-gray-200">
-  <main class="mx-auto max-w-screen-xl my-12">
+  <main class="mx-auto max-w-screen-xl my-4 lg:my-12">
     <div class="mx-4 bg-white shadow-lg rounded-lg overflow-hidden">
-      <!-- Phần ảnh bìa và avatar -->
+      
       <div class="relative">
-        <!-- Ảnh bìa thực tế -->
-        <img src="cover.jpg" alt="Ảnh bìa" class="w-full h-auto bg-gray-300">
-        <!-- Avatar: Được đặt ở góc dưới bên trái của ảnh bìa -->
-        <div class="w-full absolute bottom-0 left-0 z-10 transform translate-y-2/3 lg:w-auto lg:translate-x-1/2 flex justify-center">
-          <!-- Ảnh đại diện (avatar) -->
-          <img src="avatar.png" alt="Avatar" class="w-40 h-40 rounded-full border-4 border-white shadow-lg">
+        <img src="cover.jpg" alt="Ảnh bìa" class="w-full h-48 lg:h-80 object-cover bg-gray-300">
+        
+        <div class="w-full absolute bottom-0 left-0 transform translate-y-1/2 flex justify-center lg:justify-start lg:translate-y-1/3 lg:translate-x-10 lg:w-auto">
+          <img src="avatar.png" alt="Avatar" class="w-32 h-32 lg:w-40 lg:h-40 rounded-full border-4 border-white shadow-lg bg-white object-cover">
         </div>
       </div>
-      <!-- Phần thông tin người dùng (họ tên, giới thiệu) -->
-      <div class="bg-gray-100 pt-[120px] lg:pt-0 lg:pl-[240px] min-h-[120px]">
+
+      <div class="bg-gray-100 pt-20 lg:pt-4 lg:pl-60 min-h-[120px]">
         <div class="p-4 text-center lg:text-left">
-          <!-- Tên người dùng -->
-          <h1 class="font-mock text-2xl text-gray-700 mb-1 font-bold">
+          <h1 class="font-sans text-2xl text-gray-800 mb-2 font-bold uppercase tracking-wide">
             Sống Màu Cỏ Dại
           </h1>
-        
-          <!-- Mô tả ngắn -->
-          <h2 class="font-mock text-gray-500">
-            Chào mừng bạn đến với GitHub của tôi! Đây là nơi tôi chia sẻ các liên kết đến tài khoản mạng xã hội và trang donate cá nhân. Nếu bạn cảm thấy hứng thú, đừng ngần ngại liên hệ hoặc hỗ trợ tôi. Cảm ơn bạn đã ghé thăm!
+          
+          <h2 class="font-sans text-gray-600 text-sm lg:text-base leading-relaxed max-w-2xl">
+            Chào mừng bạn đến với GitHub của tôi! Đây là nơi tôi chia sẻ các liên kết đến tài khoản mạng xã hội và trang donate cá nhân. Nếu bạn cảm thấy hứng thú, đừng ngần ngại liên hệ hoặc hỗ trợ tôi.
           </h2>
         </div>
       </div>
-    <!-- Phần nội dung chính -->
-<div class="font-mock px-5 py-8 text-gray-400">
-  
-  <!-- Các nút liên kết mạng xã hội -->
-  <div class="flex flex-wrap justify-center gap-6">
-<!-- Gmail -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=songmaucodai@gmail.com" target="_blank" class="bg-[#D44638] text-white rounded-full p-4 hover:bg-[#C13529] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-  <i class="fab fa-google"></i> <!-- Biểu tượng Gmail (Google) -->
-</a>
-<!-- Yahoo -->
-<a href="mailto:songmaucodai@yahoo.com" target="_blank" class="bg-[#720E9E] text-white rounded-full p-4 hover:bg-[#5e0b7f] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-  <i class="fab fa-yahoo"></i> <!-- Biểu tượng Yahoo -->
-</a>
-    <!-- Telegram -->
-    <a href="https://t.me/songmaucodai" target="_blank" class="bg-[#0088cc] text-white rounded-full p-4 hover:bg-[#006d99] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-telegram-plane"></i> <!-- Biểu tượng Telegram -->
-    </a>
-    <!-- Facebook -->
-    <a href="https://facebook.com/songmaucodai" class="bg-blue-600 text-white rounded-full p-4 hover:bg-blue-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-facebook-f"></i> <!-- Biểu tượng Facebook -->
-    </a>
-    <!-- YouTube -->
-    <a href="https://youtube.com/@songmaucodai" class="bg-red-600 text-white rounded-full p-4 hover:bg-red-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-youtube"></i> <!-- Biểu tượng YouTube -->
-    </a>
-    <!-- Twitter -->
-    <a href="https://twitter.com/songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-700 w-12 h-12 flex items-center justify-center">
-      <i class="fa-brands fa-x-twitter"></i> <!-- Biểu tượng Twitter mới -->
-    </a>
-    <!-- Instagram -->
-    <a href="https://instagram.com/songmaucodai" class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 text-white rounded-full p-4 hover:bg-gradient-to-br hover:from-purple-400 hover:via-pink-400 hover:to-red-400 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i> <!-- Biểu tượng Instagram -->
-    </a>
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-700 transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-tiktok"></i> <!-- Biểu tượng TikTok -->
-    </a>
-    <!-- Patreon -->
-    <a href="https://www.patreon.com/c/songmaucodai_" target="_blank" class="bg-[#FF5C5C] text-white rounded-full p-4 hover:bg-[#FF8080] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-patreon"></i> <!-- Biểu tượng Patreon -->
-    </a>
-    <!-- Ko-fi -->
-    <a href="https://ko-fi.com/songmaucodai" target="_blank" class="bg-[#72a4f2] text-white rounded-full p-4 hover:bg-[#6297d7] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fa fa-ko-fi"></i> <!-- Biểu tượng Ko-fi -->
-    </a>
-    <!-- PayPal -->
-    <a href="https://paypal.me/songmaucodai" target="_blank" class="bg-[#0069B9] text-white rounded-full p-4 hover:bg-blue-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-paypal"></i> <!-- Biểu tượng PayPal -->
-    </a>
-  </div>
+
+      <div class="font-sans px-5 py-10 bg-white">
+        
+        <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
+            
+            <a href="https://songmaucodai.online" class="bg-gray-800 text-white rounded-full p-4 hover:bg-gray-600 transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Về trang chủ">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=songmaucodai@gmail.com" target="_blank" class="bg-[#D44638] text-white rounded-full p-4 hover:bg-[#C13529] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Gmail">
+              <i class="fab fa-google"></i>
+            </a>
+            
+            <a href="mailto:songmaucodai@yahoo.com" target="_blank" class="bg-[#720E9E] text-white rounded-full p-4 hover:bg-[#5e0b7f] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Yahoo">
+              <i class="fab fa-yahoo"></i>
+            </a>
+
+            <a href="https://t.me/songmaucodai" target="_blank" class="bg-[#0088cc] text-white rounded-full p-4 hover:bg-[#006d99] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Telegram">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+
+            <a href="https://facebook.com/songmaucodai" class="bg-[#1877F2] text-white rounded-full p-4 hover:bg-[#145dbf] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://youtube.com/@songmaucodai" class="bg-[#FF0000] text-white rounded-full p-4 hover:bg-[#cc0000] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://twitter.com/songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-700 transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://instagram.com/songmaucodai" class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 text-white rounded-full p-4 hover:opacity-80 transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-800 transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.patreon.com/c/songmaucodai_" target="_blank" class="bg-[#FF424D] text-white rounded-full p-4 hover:bg-[#e63b45] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Patreon">
+              <i class="fab fa-patreon"></i>
+            </a>
+
+            <a href="https://ko-fi.com/songmaucodai" target="_blank" class="bg-[#29abe0] text-white rounded-full p-4 hover:bg-[#2390bd] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="Ko-fi">
+              <i class="fa-solid fa-mug-hot"></i> 
+            </a>
+
+            <a href="https://paypal.me/songmaucodai" target="_blank" class="bg-[#00457C] text-white rounded-full p-4 hover:bg-[#00335c] transition-all duration-300 w-12 h-12 flex items-center justify-center shadow-md" title="PayPal">
+              <i class="fab fa-paypal"></i>
+            </a>
+            
+        </div>
+      </div>
     </div>
+    
+    <div class="text-center mt-8 text-gray-500 text-sm">
+        &copy; 2025 Songmaucodai.Online
+    </div>
+
   </main>
 </body>
 </html>
