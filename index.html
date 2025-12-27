@@ -1,96 +1,355 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Cá Nhân</title>
-  <!-- Liên kết với TailwindCSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-<!-- Thêm favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-<!-- Thêm vào trong <head> của trang HTML để sử dụng Font Awesome mới -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" id="font-awesome-5">
-</head>
-<body class="bg-gray-200">
-  <main class="mx-auto max-w-screen-xl my-12">
-    <div class="mx-4 bg-white shadow-lg rounded-lg overflow-hidden">
-      <!-- Phần ảnh bìa và avatar -->
-      <div class="relative">
-        <!-- Ảnh bìa thực tế -->
-        <img src="cover.jpg" alt="Ảnh bìa" class="w-full h-auto bg-gray-300">
-        <!-- Avatar: Được đặt ở góc dưới bên trái của ảnh bìa -->
-        <div class="w-full absolute bottom-0 left-0 z-10 transform translate-y-2/3 lg:w-auto lg:translate-x-1/2 flex justify-center">
-          <!-- Ảnh đại diện (avatar) -->
-          <img src="avatar.png" alt="Avatar" class="w-40 h-40 rounded-full border-4 border-white shadow-lg">
-        </div>
-      </div>
-      <!-- Phần thông tin người dùng (họ tên, giới thiệu) -->
-      <div class="bg-gray-100 pt-[120px] lg:pt-0 lg:pl-[240px] min-h-[120px]">
-        <div class="p-4 text-center lg:text-left">
-          <!-- Tên người dùng -->
-          <h1 class="font-mock text-2xl text-gray-700 mb-1 font-bold">
-            Sống Màu Cỏ Dại
-          </h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songmaucodai - Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --hover-bg: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            color: var(--text-main);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p.bio {
+            color: var(--text-sub);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* --- PHẦN DONATE (Accordion Style) --- */
+        .donate-container {
+            margin-bottom: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Nút Trigger chính */
+        .donate-trigger {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 10px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            outline: none;
+        }
+
+        .donate-trigger:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ef4444; /* Viền đỏ nhẹ khi hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+        }
         
-          <!-- Mô tả ngắn -->
-          <h2 class="font-mock text-gray-500">
-            Chào mừng bạn đến với GitHub của tôi! Đây là nơi tôi chia sẻ các liên kết đến tài khoản mạng xã hội và trang donate cá nhân. Nếu bạn cảm thấy hứng thú, đừng ngần ngại liên hệ hoặc hỗ trợ tôi. Cảm ơn bạn đã ghé thăm!
-          </h2>
+        .donate-trigger.active {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: #ef4444;
+            color: #fca5a5;
+        }
+
+        /* Khối chứa các nút Donate (Ẩn mặc định) */
+        .donate-options {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        /* Khi class .show được thêm vào */
+        .donate-options.show {
+            max-height: 150px; /* Đủ để hiện nội dung */
+            opacity: 1;
+            margin-top: 15px;
+        }
+
+        /* Style các nút con */
+        .donate-btn {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            transition: transform 0.2s, opacity 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .donate-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .btn-kofi { background-color: #29abe0; }
+        .btn-paypal { background-color: #00457C; }
+        .btn-patreon { background-color: #FF424D; }
+
+        /* Grid dự án */
+        .grid {
+            display: grid;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            background: var(--hover-bg);
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+            color: var(--accent);
+        }
+
+        .card-content {
+            text-align: left;
+            flex: 1;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Social Links */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .social-link {
+            color: var(--text-sub);
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="avatar">
+            <i class="fa-solid fa-code"></i>
         </div>
-      </div>
-    <!-- Phần nội dung chính -->
-<div class="font-mock px-5 py-8 text-gray-400">
-  
-  <!-- Các nút liên kết mạng xã hội -->
-  <div class="flex flex-wrap justify-center gap-6">
-<!-- Gmail -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=songmaucodai@gmail.com" target="_blank" class="bg-[#D44638] text-white rounded-full p-4 hover:bg-[#C13529] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-  <i class="fab fa-google"></i> <!-- Biểu tượng Gmail (Google) -->
-</a>
-<!-- Yahoo -->
-<a href="mailto:songmaucodai@yahoo.com" target="_blank" class="bg-[#720E9E] text-white rounded-full p-4 hover:bg-[#5e0b7f] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-  <i class="fab fa-yahoo"></i> <!-- Biểu tượng Yahoo -->
-</a>
-    <!-- Telegram -->
-    <a href="https://t.me/songmaucodai" target="_blank" class="bg-[#0088cc] text-white rounded-full p-4 hover:bg-[#006d99] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-telegram-plane"></i> <!-- Biểu tượng Telegram -->
-    </a>
-    <!-- Facebook -->
-    <a href="https://facebook.com/songmaucodai" class="bg-blue-600 text-white rounded-full p-4 hover:bg-blue-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-facebook-f"></i> <!-- Biểu tượng Facebook -->
-    </a>
-    <!-- YouTube -->
-    <a href="https://youtube.com/@songmaucodai" class="bg-red-600 text-white rounded-full p-4 hover:bg-red-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-youtube"></i> <!-- Biểu tượng YouTube -->
-    </a>
-    <!-- Twitter -->
-    <a href="https://twitter.com/songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-700 w-12 h-12 flex items-center justify-center">
-      <i class="fa-brands fa-x-twitter"></i> <!-- Biểu tượng Twitter mới -->
-    </a>
-    <!-- Instagram -->
-    <a href="https://instagram.com/songmaucodai" class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 text-white rounded-full p-4 hover:bg-gradient-to-br hover:from-purple-400 hover:via-pink-400 hover:to-red-400 transition-colors duration-300 w-12 h-12 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i> <!-- Biểu tượng Instagram -->
-    </a>
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@songmaucodai" target="_blank" class="bg-black text-white rounded-full p-4 hover:bg-gray-700 transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-tiktok"></i> <!-- Biểu tượng TikTok -->
-    </a>
-    <!-- Patreon -->
-    <a href="https://www.patreon.com/c/songmaucodai_" target="_blank" class="bg-[#FF5C5C] text-white rounded-full p-4 hover:bg-[#FF8080] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-patreon"></i> <!-- Biểu tượng Patreon -->
-    </a>
-    <!-- Ko-fi -->
-    <a href="https://ko-fi.com/songmaucodai" target="_blank" class="bg-[#72a4f2] text-white rounded-full p-4 hover:bg-[#6297d7] transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fa fa-ko-fi"></i> <!-- Biểu tượng Ko-fi -->
-    </a>
-    <!-- PayPal -->
-    <a href="https://paypal.me/songmaucodai" target="_blank" class="bg-[#0069B9] text-white rounded-full p-4 hover:bg-blue-500 transition-colors duration-300 w-12 h-12 flex items-center justify-center">
-      <i class="fab fa-paypal"></i> <!-- Biểu tượng PayPal -->
-    </a>
-  </div>
+
+        <h1>songmaucodai</h1>
+        <p class="bio">
+            Chào mừng đến với trang cá nhân của tôi.<br>
+            Kho lưu trữ các công cụ & tài nguyên hữu ích.
+        </p>
+
+        <div class="donate-container">
+            <button id="donate-toggle" class="donate-trigger">
+                <i class="fa-solid fa-heart" style="color: #ef4444;"></i> 
+                <span>Support My Work</span>
+                <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px; opacity: 0.7;"></i>
+            </button>
+            
+            <div id="donate-options" class="donate-options">
+                <a href="https://ko-fi.com/songmaucodai" target="_blank" class="donate-btn btn-kofi">
+                    <i class="fa-solid fa-mug-hot" style="margin-right:8px"></i> Ko-fi
+                </a>
+                <a href="https://www.paypal.com/paypalme/songmaucodai" target="_blank" class="donate-btn btn-paypal">
+                    <i class="fa-brands fa-paypal" style="margin-right:8px"></i> PayPal
+                </a>
+                <a href="https://patreon.com/songmaucodai_" target="_blank" class="donate-btn btn-patreon">
+                    <i class="fa-brands fa-patreon" style="margin-right:8px"></i> Patreon
+                </a>
+            </div>
+        </div>
+
+        <div class="grid">
+            
+            <a href="/info" class="card">
+                <div class="card-icon">
+                    <i class="fa-regular fa-id-card"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Personal Info</span>
+                    <span class="card-desc">Thông tin cá nhân & Hồ sơ</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="color: #475569;"></i>
+            </a>
+
+            <a href="/us-teacher-paystub" class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Pay Stub Generator</span>
+                    <span class="card-desc">Công cụ tạo phiếu lương US K-12</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="color: #475569;"></i>
+            </a>
+
+            <a href="https://github.com/songmaucodai/IDMActivationScript" target="_blank" class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">IDM Activation Script</span>
+                    <span class="card-desc">Script kích hoạt IDM (Sưu tầm)</span>
+                </div>
+                <i class="fa-brands fa-github" style="color: #475569;"></i>
+            </a>
+
+             <a href="https://github.com/songmaucodai/ReadMail" target="_blank" class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">ReadMail Outlook Tool</span>
+                    <span class="card-desc">Tool lấy Refresh Token & Đọc Mail</span>
+                </div>
+                <i class="fa-brands fa-github" style="color: #475569;"></i>
+            </a>
+
+        </div>
+
+        <div class="socials">
+            <a href="https://github.com/songmaucodai" target="_blank" class="social-link" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=songmaucodai@gmail.com" target="_blank" class="social-link" title="Gửi Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://t.me/songmaucodai" target="_blank" class="social-link" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2025 songmaucodai.online
+        </footer>
     </div>
-  </main>
+
+    <script>
+        const donateBtn = document.getElementById('donate-toggle');
+        const donateOptions = document.getElementById('donate-options');
+        const iconChevron = donateBtn.querySelector('.fa-chevron-down');
+
+        donateBtn.addEventListener('click', () => {
+            donateOptions.classList.toggle('show');
+            donateBtn.classList.toggle('active');
+            
+            // Xoay icon mũi tên
+            if (donateOptions.classList.contains('show')) {
+                iconChevron.style.transform = 'rotate(180deg)';
+                iconChevron.style.transition = 'transform 0.3s';
+            } else {
+                iconChevron.style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
+
 </body>
 </html>
