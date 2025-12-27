@@ -95,15 +95,25 @@
       </div>
     </div>
     
-    <div class="text-center mt-8 text-gray-500 text-sm">
-    &copy; <span id="year"></span> songmaucodai
-</div>
-
-<script>
-    // Script lấy năm hiện tại
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <div class="text-center mt-8 text-gray-500 text-sm pb-8">
+        &copy; <span id="footer-year"></span> songmaucodai
+    </div>
 
   </main>
+
+  <script>
+    // Logic Footer Dải năm (Giống trang Hub)
+    const startYear = 2023; // Năm bắt đầu
+    const currentYear = new Date().getFullYear(); // Năm hiện tại
+    const yearSpan = document.getElementById("footer-year");
+
+    if (currentYear > startYear) {
+        // Hiện dạng "2023 - 2025"
+        yearSpan.textContent = `${startYear} - ${currentYear}`;
+    } else {
+        // Chỉ hiện năm hiện tại
+        yearSpan.textContent = currentYear;
+    }
+  </script>
 </body>
 </html>
