@@ -1,39 +1,26 @@
----
-cover: cover.jpg
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: false
-  outline:
-    visible: false
-  pagination:
-    visible: false
----
-
 <div align="center">
+
+  <img src="cover.jpg" alt="Cover Image" width="100%" style="border-radius: 10px; margin-bottom: 20px;">
+
   <img src="avatar.png" alt="Avatar" width="140" style="border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
 
   # Sống Màu Cỏ Dại
 
-  > Chào mừng bạn đến với GitHub của tôi! Đây là nơi tôi chia sẻ các liên kết đến tài khoản mạng xã hội và trang donate cá nhân. Nếu bạn cảm thấy hứng thú, đừng ngần ngại liên hệ hoặc hỗ trợ tôi.
+  > Chào mừng bạn đến với GitHub của tôi! Đây là nơi tôi chia sẻ các liên kết đến tài khoản mạng xã hội và trang donate cá nhân.
+
+  <br>
+
+  <a href="https://songmaucodai.online">
+    <img src="https://img.shields.io/badge/Truy_cập_Website_Cá_Nhân-333333?style=for-the-badge&logo=google-home&logoColor=white" alt="Website">
+  </a>
+
 </div>
 
 ***
 
-## Liên hệ & Kết nối
+## 📬 Liên hệ & Kết nối
 
 <div align="center">
-
-  <a href="https://songmaucodai.online">
-    <img src="https://img.shields.io/badge/Website-333333?style=for-the-badge&logo=google-home&logoColor=white" alt="Website">
-  </a>
 
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=songmaucodai@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D44638?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
@@ -49,7 +36,7 @@ layout:
 
 </div>
 
-## Mạng xã hội
+## 🌐 Mạng xã hội
 
 <div align="center">
 
@@ -75,7 +62,7 @@ layout:
 
 </div>
 
-## Ủng hộ tôi (Donate)
+## ☕ Ủng hộ tôi (Donate)
 
 <div align="center">
 
