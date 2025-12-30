@@ -27,7 +27,7 @@ layout:
 
 ***
 
-## 📬 Liên hệ & Kết nối
+## Liên hệ & Kết nối
 
 <div align="center">
 
@@ -49,7 +49,7 @@ layout:
 
 </div>
 
-## 🌐 Mạng xã hội
+## Mạng xã hội
 
 <div align="center">
 
@@ -75,7 +75,7 @@ layout:
 
 </div>
 
-## ☕ Ủng hộ tôi (Donate)
+## Ủng hộ tôi (Donate)
 
 <div align="center">
 
